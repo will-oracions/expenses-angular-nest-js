@@ -1,0 +1,19 @@
+{
+  "Expenses": [
+    {
+      "Id": 1,
+      "name": "Achat d'un nouveau Smartphone",
+      "Desc": "I'm building a fake API with json-server and I came across a problem when passing a query. I can show the parameters of a relationship when I use _expand, but when it is a relationship within a child it does not work.",
+      "CreatedAt": "2021-09-23",
+      "Amount": 85000
+    },
+
+    {
+      "Id": 2,
+      "name": "Achat d'une souris usb",
+      "Desc": " json-server and I came across a problem when passing a query. I can show the parameters of a relationship when I use _expand, but when it is a relationship within a child it does not work.",
+      "CreatedAt": "2021-05-03",
+      "Amount": 8000
+    }
+  ]
+}
