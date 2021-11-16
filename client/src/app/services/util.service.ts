@@ -1,9 +1,12 @@
 import { Injectable } from '@angular/core';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class UtilService {
+  constructor() {}
 
-  constructor() { }
+  substring(lenght: number, value: string): string {
+    return value.substr(0, lenght);
+  }
 }

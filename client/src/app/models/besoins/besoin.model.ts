@@ -9,7 +9,7 @@ export class BesoinModel extends BaseModel {
     public Amount?: number,
     public Devise?: DeviseInterface,
     public Expense?: ExpenseModel,
-    public Status?: BesoinStatus,
+    public Status: BesoinStatus = BesoinStatus.PENDING,
     public Priority?: BesoinPriority
   ) {
     super();
