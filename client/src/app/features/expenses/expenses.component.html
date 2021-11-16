@@ -1,1 +1,38 @@
-<p>expenses works!</p>
+<div class="tables-box">
+  <div class="top">
+    <h2>Tous les besoins</h2>
+    <!-- <button>Plus</button> -->
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Nom</th>
+        <th>Description</th>
+        <th>Date</th>
+        <th>Montant (XAF)</th>
+        <th>Status</th>
+        <th>Actions</th>
+      </tr>
+
+      <!-- <tr>Priorité</tr> -->
+    </thead>
+    <tbody>
+      <tr
+        [routerLink]="'/expenses/' + expense.Id"
+        *ngFor="let expense of expenses"
+      >
+        <td>{{ expense.Name }}</td>
+        <td>{{ expense.Desc | sharedSubstring: 50 }}</td>
+        <td>----</td>
+        <td>----</td>
+        <td>----</td>
+        <td>
+          <button class="_button small">D</button>
+          <button class="_button small">M</button>
+          <button class="_button small">S</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
