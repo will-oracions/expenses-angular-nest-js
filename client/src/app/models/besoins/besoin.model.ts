@@ -4,13 +4,13 @@ import { DeviseInterface } from '../devises/devise.model';
 
 export class BesoinModel extends BaseModel {
   constructor(
-    public Name: string,
-    public Desc: string,
-    public Amount: number,
-    public Devise: DeviseInterface,
-    public Expense: ExpenseModel,
-    public Status: BesoinStatus,
-    public Priority: BesoinPriority
+    public Name?: string,
+    public Desc?: string,
+    public Amount?: number,
+    public Devise?: DeviseInterface,
+    public Expense?: ExpenseModel,
+    public Status?: BesoinStatus,
+    public Priority?: BesoinPriority
   ) {
     super();
   }

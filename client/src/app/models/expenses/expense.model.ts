@@ -3,10 +3,10 @@ import { DeviseInterface } from '../devises/devise.model';
 
 export class ExpenseModel extends BaseModel {
   constructor(
-    public Name: string,
-    public Desc: string,
-    public amount: number,
-    public devise: DeviseInterface
+    public Name?: string,
+    public Desc?: string,
+    public amount?: number,
+    public devise?: DeviseInterface
   ) {
     super();
   }
