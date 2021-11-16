@@ -19,7 +19,7 @@
       <!-- <tr>Priorité</tr> -->
     </thead>
     <tbody>
-      <tr *ngFor="let besoin of besoins">
+      <tr [routerLink]="'/besoins/' + besoin.Id" *ngFor="let besoin of besoins">
         <td>{{ besoin.Name }}</td>
         <td>{{ besoin.Desc | sharedSubstring: 50 }}</td>
         <td>----</td>
