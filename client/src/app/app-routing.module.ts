@@ -21,6 +21,13 @@ const routes: Routes = [
       ),
   },
   {
+    path: 'settings',
+    loadChildren: () =>
+      import('@Features/settings/settings.module').then(
+        (m) => m.SettingsModule
+      ),
+  },
+  {
     path: 'not-found',
     component: NotFoundComponent,
   },

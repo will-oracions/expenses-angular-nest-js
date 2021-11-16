@@ -1,1 +1,85 @@
-<p>add works!</p>
+<div id="add">
+  <div>
+    <h1>Nouveau besoin</h1>
+
+    <form>
+      <div class="_form-group">
+        <label for="name">Nom du besoin</label>
+        <input id="name" type="text" placeholder="Ex. Smartphone" />
+      </div>
+
+      <div class="_form-group">
+        <label for="description">Description du besoin</label>
+        <textarea
+          name="description"
+          id="description"
+          cols="30"
+          rows="10"
+          placeholder="Ex. Device à utiliser pour tester mes application en pharse de développement"
+        ></textarea>
+      </div>
+
+      <div class="_row">
+        <div class="_form-group">
+          <label for="amount">Montant du besoin</label>
+          <input id="amount" type="text" placeholder="Ex. 87.000" />
+        </div>
+
+        <div class="_form-group">
+          <label for="devise">Devise de la monaie</label>
+          <select name="devise" id="devicse">
+            <option selected value="xaf">XAF</option>
+            <option value="euro">Euro</option>
+            <option value="dollar">$</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="_form-group">
+        <button type="submit" class="_button primary">Enregister</button>
+      </div>
+    </form>
+  </div>
+
+  <div>
+    <h1>Nouvelle dépense</h1>
+
+    <form>
+      <div class="_form-group">
+        <label for="name_d">Nom de la dépense</label>
+        <input id="name_d" type="text" placeholder="Ex. Smartphone" />
+      </div>
+
+      <div class="_form-group">
+        <label for="description">Description de la dépense</label>
+        <textarea
+          name="description"
+          id="description_d"
+          cols="30"
+          rows="10"
+          placeholder="Ex. Device à utiliser pour tester mes application en pharse de développement"
+        ></textarea>
+      </div>
+
+      <div class="_row">
+        <div class="_form-group">
+          <label for="amount">Montant de la dépense</label>
+          <input id="amount" type="text" placeholder="Ex. 87.000" />
+        </div>
+
+        <div class="_form-group">
+          <label for="devise">Devise de la monaie</label>
+          <select name="devise" id="devicse">
+            <option selected value="xaf">XAF</option>
+            <option value="euro">Euro</option>
+            <option value="dollar">$</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="_form-group">
+        <button type="submit" class="_button primary">Enregister</button>
+      </div>
+    </form>
+  </div>
+</div>
