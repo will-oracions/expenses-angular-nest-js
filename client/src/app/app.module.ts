@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import { TestComponent } from './test/test.component';
 
 @NgModule({
-  declarations: [TestComponent],
+  declarations: [AppComponent, TestComponent],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],
