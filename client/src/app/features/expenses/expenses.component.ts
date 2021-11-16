@@ -64,7 +64,6 @@ export class ExpensesComponent implements OnInit {
     try {
       this.loadingGet = true;
       const response = await this.expenseService.GetLazy().toPromise();
-      console.log('Get All: ', response);
       this.expenses = response;
       this.loadingGet = false;
     } catch (error) {
