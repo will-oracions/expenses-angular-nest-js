@@ -8,7 +8,7 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root',
 })
 export class ExpenseService {
-  private rootUrl = `${environment.api}/besoins`;
+  private rootUrl = `${environment.api}/expenses`;
 
   constructor(private http: HttpClient) {}
 

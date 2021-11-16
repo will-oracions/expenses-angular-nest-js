@@ -5,8 +5,8 @@ export class ExpenseModel extends BaseModel {
   constructor(
     public Name?: string,
     public Desc?: string,
-    public amount?: number,
-    public devise?: DeviseInterface
+    public Amount?: number,
+    public Devise?: DeviseInterface
   ) {
     super();
   }

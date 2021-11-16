@@ -5,6 +5,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { SharedSubstringPipe } from './pipes/shared-substring.pipe';
+import { HttpClientModule } from '@angular/common/http';
 
 const components = [
   SharedDataTableComponent,
@@ -16,7 +17,7 @@ const components = [
 
 @NgModule({
   declarations: [components],
-  imports: [CommonModule],
+  imports: [CommonModule, HttpClientModule],
   exports: [components],
 })
 export class SharedModule {}
