@@ -5,14 +5,16 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 
+const components = [
+  SharedDataTableComponent,
+  HeaderComponent,
+  FooterComponent,
+  NotFoundComponent,
+];
+
 @NgModule({
-  declarations: [
-    SharedDataTableComponent,
-    HeaderComponent,
-    FooterComponent,
-    NotFoundComponent,
-  ],
+  declarations: [components],
   imports: [CommonModule],
-  exports: [SharedModule],
+  exports: [components],
 })
 export class SharedModule {}

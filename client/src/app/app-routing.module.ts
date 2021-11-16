@@ -1,12 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { NotFoundComponent } from '@Shared/components/not-found/not-found.component';
 
 const routes: Routes = [
-  // {
-  //   path: '',
-  //   loadChildren: () =>
-  //     import('@Features/home/home.module').then((m) => m.HomeModule),
-  // },
+  {
+    path: '',
+    loadChildren: () =>
+      import('@Features/home/home.module').then((m) => m.HomeModule),
+  },
   {
     path: 'besoins',
     loadChildren: () =>
@@ -19,15 +20,15 @@ const routes: Routes = [
         (m) => m.ExpensesModule
       ),
   },
-  // {
-  //   path: 'not-found',
-  //   component: NotFoundComponent,
-  // },
-  // {
-  //   path: '**',
-  //   pathMatch: 'full',
-  //   redirectTo: 'not-found',
-  // },
+  {
+    path: 'not-found',
+    component: NotFoundComponent,
+  },
+  {
+    path: '**',
+    pathMatch: 'full',
+    redirectTo: 'not-found',
+  },
 ];
 
 @NgModule({
