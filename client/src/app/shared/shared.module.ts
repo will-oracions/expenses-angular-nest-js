@@ -13,5 +13,6 @@ import { AppComponent } from '../app.component';
     FooterComponent,
   ],
   imports: [CommonModule],
+  exports: [SharedModule],
 })
 export class SharedModule {}
