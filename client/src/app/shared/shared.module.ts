@@ -6,6 +6,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { SharedSubstringPipe } from './pipes/shared-substring.pipe';
 import { HttpClientModule } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
 
 const components = [
   SharedDataTableComponent,
@@ -17,7 +18,7 @@ const components = [
 
 @NgModule({
   declarations: [components],
-  imports: [CommonModule, HttpClientModule],
+  imports: [CommonModule, RouterModule, HttpClientModule],
   exports: [components],
 })
 export class SharedModule {}
