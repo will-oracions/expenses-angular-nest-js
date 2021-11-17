@@ -1,9 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {
-  BesoinModel,
-  BesoinPriority,
-  BesoinStatus,
-} from '@Models/besoins/besoin.model';
+import { BesoinModel } from '@Models/besoins/besoin.model';
+import { BesoinService } from '@Services/http/besoins/besoin.service';
 
 @Component({
   selector: 'app-besoins',
@@ -11,58 +8,23 @@ import {
   styleUrls: ['./besoins.component.scss'],
 })
 export class BesoinsComponent implements OnInit {
+  loadingGet: boolean;
   besoins: BesoinModel[];
 
-  constructor() {
-    this.besoins = [
-      new BesoinModel(
-        'Passport',
-        'Passport express dans les deux prochainsmois pour mener à bien un projet crutiale ( dans huits mois)',
-        130000,
-        //  Devise: null,
-        //  Expense: null,
-        undefined,
-        undefined,
-        undefined,
-        BesoinPriority.PRIMARY
-      ),
-      new BesoinModel(
-        'Smartphone',
-        'Passport express dans les deux prochains mois pour mener à bien un projet crutiale ( dans huits mois)',
-        130000,
-        //  Devise: null,
-        //  Expense: null,
-        undefined,
-        undefined,
-        undefined,
-        BesoinPriority.PRIMARY
-      ),
-      new BesoinModel(
-        'Mac Book Pro',
-        'Passport express dans les deux prochains mois pour mener à bien un projet crutiale ( dans huits mois)',
-        130000,
-        //  Devise: null,
-        //  Expense: null,
-        undefined,
-        undefined,
-        undefined,
-        BesoinPriority.PRIMARY
-      ),
-      new BesoinModel(
-        'Clavier',
-        'Passport express dans les deux prochains mois pour mener à bien un projet crutiale ( dans huits mois)',
-        130000,
-        //  Devise: null,
-        //  Expense: null,
-        undefined,
-        undefined,
-        undefined,
-        BesoinPriority.PRIMARY
-      ),
-    ];
+  constructor(private besoinService: BesoinService) {
+    this.loadingGet = false;
+    this.besoins = [];
   }
 
-  ngOnInit(): void {
-    console.log(this.besoins);
+  async ngOnInit(): Promise<void> {
+    try {
+      this.loadingGet = true;
+      const response = await this.besoinService.GetLazy().toPromise();
+      this.besoins = response;
+      console.log(response);
+    } catch (error) {
+      //
+      this.loadingGet = false;
+    }
   }
 }

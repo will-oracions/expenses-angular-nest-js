@@ -1,7 +1,9 @@
+<div *ngIf="besoins.length === 0">Aucun besoin enregistré !</div>
+
 <!-- Besoins  -->
-<div class="tables-box">
+<div *ngIf="besoins.length > 0" class="tables-box">
   <div class="top">
-    <h2>Tous les besoins</h2>
+    <h2>Toutes les dépenses</h2>
     <!-- <button>Plus</button> -->
   </div>
 
@@ -22,9 +24,10 @@
       <tr [routerLink]="'/besoins/' + besoin.Id" *ngFor="let besoin of besoins">
         <td>{{ besoin.Name }}</td>
         <td>{{ besoin.Desc | sharedSubstring: 50 }}</td>
-        <td>----</td>
-        <td>----</td>
-        <td>----</td>
+        <td>{{ besoin.CreatedAt }}</td>
+        <td>{{ besoin.Amount }}</td>
+
+        <!-- <td>{{ besoin.Status }}</td> -->
         <td>
           <button class="_button small">D</button>
           <button class="_button small">M</button>
@@ -34,4 +37,5 @@
     </tbody>
   </table>
 </div>
+
 <!-- Besoins  -->
