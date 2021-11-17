@@ -2,15 +2,21 @@
   <div>
     <h1>Nouveau besoin</h1>
 
-    <form>
+    <form [formGroup]="formB" (ngSubmit)="onSubmitB()">
       <div class="_form-group">
         <label for="name">Nom du besoin</label>
-        <input id="name" type="text" placeholder="Ex. Smartphone" />
+        <input
+          formControlName="Name"
+          id="name"
+          type="text"
+          placeholder="Ex. Smartphone"
+        />
       </div>
 
       <div class="_form-group">
         <label for="description">Description du besoin</label>
         <textarea
+          formControlName="Desc"
           name="description"
           id="description"
           cols="30"
@@ -22,12 +28,17 @@
       <div class="_row">
         <div class="_form-group">
           <label for="amount">Montant du besoin</label>
-          <input id="amount" type="text" placeholder="Ex. 87.000" />
+          <input
+            formControlName="Amount"
+            id="amount"
+            type="text"
+            placeholder="Ex. 87.000"
+          />
         </div>
 
         <div class="_form-group">
           <label for="devise">Devise de la monaie</label>
-          <select name="devise" id="devicse">
+          <select formControlName="Devise" name="devise" id="devicse">
             <option selected value="xaf">XAF</option>
             <option value="euro">Euro</option>
             <option value="dollar">$</option>
