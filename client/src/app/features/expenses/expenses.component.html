@@ -1,6 +1,8 @@
-<div class="tables-box">
+<div *ngIf="expenses.length === 0">Aucunes dépenses !</div>
+
+<div *ngIf="expenses.length > 0" class="tables-box">
   <div class="top">
-    <h2>Tous les besoins</h2>
+    <h2>Toutes les dépenses</h2>
     <!-- <button>Plus</button> -->
   </div>
 
